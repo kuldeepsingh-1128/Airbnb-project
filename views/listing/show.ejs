@@ -1,0 +1,21 @@
+<% layout("/layouts/boilerplate.ejs")%>
+
+<body>
+    <h3>show list</h3>
+    <ul>
+        <li><%=Listing.title%></li>
+        <li><%=Listing.description%></li>
+        <li>$<%=Listing.price%></li>
+        <li><%=Listing.location%></li>
+        <li><%=Listing.country%></li>
+        <li><%=Listing._id%></li>
+    </ul>
+        <a href="/listing/<%=Listing._id%>/edit">Edit</a>
+
+        <br><br><br>
+        <a href="/listing">Home</a>
+        <br><br>
+        <form action="/listing/<%=Listing._id%>?_method=Delete" method="post">
+            <button>Delete this listing</button>
+        </form>
+</body>
