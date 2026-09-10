@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate.ejs")%>
 
     <body>
-        <h3>listings</h3>
+        <h3>&nbsp;&nbsp;&nbsp; Listings</h3>
         <!-- <form action="/listing/new">
             <button>create new</button>
         </form> -->
@@ -21,7 +21,7 @@
                                     <b>
                                         <%=listing.title%>
                                     </b> <br>
-                                    &#8377 <%=listing.price.toLocaleString("en-IN")%>/Night
+                                    &#8377 <%=listing.price!=null?listing.price.toLocaleString("en-IN"):"N/A"%>/Night
                                 </p>
                             </div>
                         </div>
